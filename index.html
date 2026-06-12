@@ -6,438 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md Ahsanul Karim - KTH Student Portfolio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 2.2em;
-            margin-bottom: 15px;
-            font-weight: 400;
-        }
-
-        .hero .subtitle {
-            font-size: 1em;
-            margin-bottom: 8px;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .hero .focus {
-            font-size: 0.95em;
-            opacity: 0.9;
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-
-        .social-icons {
-            margin-top: 30px;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 1.8em;
-            margin: 0 12px;
-            transition: opacity 0.3s;
-            display: inline-block;
-        }
-
-        .social-icons a:hover {
-            opacity: 0.7;
-        }
-
-        nav {
-            background: #f8f9fa;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #dee2e6;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #495057;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 0.85em;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #667eea;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        .section-title {
-            font-size: 1.8em;
-            margin-bottom: 30px;
-            color: #495057;
-            display: flex;
-            align-items: center;
-            font-weight: 400;
-        }
-
-        .section-title::before {
-            content: "👤";
-            margin-right: 15px;
-            font-size: 1.2em;
-        }
-
-        .about-content {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            font-size: 1.05em;
-            line-height: 1.8;
-        }
-
-        /* Education Section */
-        .education {
-            background: #f0f4ff;
-        }
-
-        .education .section-title::before {
-            content: "🎓";
-        }
-
-        .education-list {
-            display: grid;
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .education-item {
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-
-        .education-item .edu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .education-item h3 {
-            color: #667eea;
-            font-size: 1.15em;
-            font-weight: 500;
-        }
-
-        .education-item .institution {
-            font-size: 0.98em;
-            color: #555;
-            margin-top: 3px;
-        }
-
-        .education-item .date {
-            font-size: 0.9em;
-            color: #888;
-            font-style: italic;
-            white-space: nowrap;
-        }
-
-        .coursework {
-            margin-top: 12px;
-            background: #f8f9fa;
-            padding: 12px 16px;
-            border-radius: 6px;
-            font-size: 0.95em;
-            color: #555;
-        }
-
-        .coursework strong {
-            color: #444;
-        }
-
-        .kth-projects {
-            margin-top: 16px;
-        }
-
-        .kth-projects h4 {
-            font-size: 0.95em;
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .kth-projects ul {
-            margin-left: 18px;
-        }
-
-        .kth-projects li {
-            margin-bottom: 8px;
-            font-size: 0.97em;
-            line-height: 1.6;
-        }
-
-        .kth-projects li strong {
-            color: #667eea;
-        }
-
-        .ai-tools-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 14px;
-            background: linear-gradient(135deg, #667eea22, #764ba222);
-            border: 1px solid #667eea44;
-            border-radius: 20px;
-            padding: 6px 14px;
-            font-size: 0.88em;
-            color: #5060c0;
-            font-weight: 500;
-        }
-
-        .experience {
-            background: #fff;
-        }
-
-        .experience .section-title::before {
-            content: "💼";
-        }
-
-        .experience-list {
-            display: grid;
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .experience-item {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-
-        .experience-item .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .experience-item h3 {
-            color: #667eea;
-            font-size: 1.2em;
-            font-weight: 500;
-        }
-
-        .experience-item .company {
-            font-size: 1em;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        .experience-item .date {
-            font-size: 0.9em;
-            color: #888;
-            font-style: italic;
-        }
-
-        .experience-item ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        .experience-item li {
-            margin-bottom: 8px;
-            font-size: 0.98em;
-        }
-
-        .projects {
-            background: #fff;
-        }
-
-        .projects .section-title::before {
-            content: "🚀";
-        }
-
-        .project-list {
-            display: grid;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .project-item {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-
-        .project-item h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            font-weight: 500;
-        }
-
-        .project-item p {
-            font-size: 1em;
-        }
-
-        .project-item .link {
-            margin-top: 10px;
-            font-size: 0.95em;
-        }
-
-        .project-item .link a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .project-item .link a:hover {
-            text-decoration: underline;
-        }
-
-        .project-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            font-size: 0.72em;
-            font-weight: 600;
-            padding: 2px 9px;
-            border-radius: 10px;
-            margin-left: 8px;
-            vertical-align: middle;
-            letter-spacing: 0.03em;
-        }
-
-        .achievements {
-            background: #fff;
-        }
-
-        .achievements .section-title::before {
-            content: "🏆";
-        }
-
-        .achievements-list {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-        }
-
-        .achievements-list ul {
-            margin-left: 20px;
-        }
-
-        .achievements-list li {
-            margin-bottom: 12px;
-            font-size: 1.05em;
-        }
-
-        .skills {
-            background: #667eea;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .skills h2 {
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            font-weight: 400;
-        }
-
-        .skills-subtitle {
-            font-size: 0.9em;
-            opacity: 0.8;
-            margin-bottom: 30px;
-        }
-
-        .skill-category {
-            margin-bottom: 20px;
-        }
-
-        .skill-category-label {
-            font-size: 0.78em;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            opacity: 0.7;
-            margin-bottom: 10px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-size: 0.92em;
-            font-weight: 300;
-        }
-
-        .skill-tag.highlight {
-            background: rgba(255, 255, 255, 0.35);
-            font-weight: 500;
-        }
-
-        .skills-divider {
-            width: 60px;
-            height: 1px;
-            background: rgba(255,255,255,0.3);
-            margin: 24px auto;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #343a40;
-            color: white;
-            font-size: 0.95em;
-        }
-
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6; font-weight: 300; }
+        .hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .hero h1 { font-size: 2.2em; margin-bottom: 15px; font-weight: 400; }
+        .hero .subtitle { font-size: 1em; margin-bottom: 8px; opacity: 0.95; font-weight: 300; }
+        .hero .focus { font-size: 0.95em; opacity: 0.9; margin-bottom: 30px; font-weight: 300; }
+        .social-icons { margin-top: 30px; }
+        .social-icons a { color: white; font-size: 1.8em; margin: 0 12px; transition: opacity 0.3s; display: inline-block; }
+        .social-icons a:hover { opacity: 0.7; }
+        nav { background: #f8f9fa; padding: 20px; text-align: center; border-bottom: 1px solid #dee2e6; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #495057; text-decoration: none; margin: 0 15px; font-weight: 500; text-transform: uppercase; font-size: 0.85em; transition: color 0.3s; }
+        nav a:hover { color: #667eea; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { font-size: 1.8em; margin-bottom: 30px; color: #495057; display: flex; align-items: center; font-weight: 400; }
+        .section-title::before { content: "👤"; margin-right: 15px; font-size: 1.2em; }
+        .about-content { background: #f8f9fa; padding: 30px; border-radius: 10px; font-size: 1.05em; line-height: 1.8; }
+        .education { background: #f0f4ff; }
+        .education .section-title::before { content: "🎓"; }
+        .education-list { display: grid; gap: 25px; margin-top: 20px; }
+        .education-item { background: #fff; padding: 25px; border-radius: 10px; border-left: 4px solid #667eea; }
+        .education-item .edu-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+        .education-item h3 { color: #667eea; font-size: 1.15em; font-weight: 500; }
+        .education-item .institution { font-size: 0.98em; color: #555; margin-top: 3px; }
+        .education-item .date { font-size: 0.9em; color: #888; font-style: italic; white-space: nowrap; }
+        .coursework { margin-top: 12px; background: #f8f9fa; padding: 12px 16px; border-radius: 6px; font-size: 0.95em; color: #555; }
+        .coursework strong { color: #444; }
+        .kth-projects { margin-top: 16px; }
+        .kth-projects h4 { font-size: 0.95em; font-weight: 600; color: #555; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .kth-projects ul { margin-left: 18px; }
+        .kth-projects li { margin-bottom: 8px; font-size: 0.97em; line-height: 1.6; }
+        .kth-projects li strong { color: #667eea; }
+        .ai-tools-badge { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; background: linear-gradient(135deg, #667eea22, #764ba222); border: 1px solid #667eea44; border-radius: 20px; padding: 6px 14px; font-size: 0.88em; color: #5060c0; font-weight: 500; }
+        .experience { background: #fff; }
+        .experience .section-title::before { content: "💼"; }
+        .experience-list { display: grid; gap: 30px; margin-top: 20px; }
+        .experience-item { background: #f8f9fa; padding: 25px; border-radius: 10px; border-left: 4px solid #667eea; }
+        .experience-item .header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px; flex-wrap: wrap; }
+        .experience-item h3 { color: #667eea; font-size: 1.2em; font-weight: 500; }
+        .experience-item .company { font-size: 1em; color: #666; margin-top: 5px; }
+        .experience-item .date { font-size: 0.9em; color: #888; font-style: italic; }
+        .experience-item ul { margin-left: 20px; margin-top: 10px; }
+        .experience-item li { margin-bottom: 8px; font-size: 0.98em; }
+        .projects { background: #fff; }
+        .projects .section-title::before { content: "🚀"; }
+        .project-list { display: grid; gap: 20px; margin-top: 20px; }
+        .project-item { background: #f8f9fa; padding: 25px; border-radius: 10px; border-left: 4px solid #667eea; }
+        .project-item h3 { color: #667eea; margin-bottom: 10px; font-size: 1.2em; font-weight: 500; }
+        .project-item p { font-size: 1em; }
+        .project-item .link { margin-top: 10px; font-size: 0.95em; }
+        .project-item .link a { color: #667eea; text-decoration: none; }
+        .project-item .link a:hover { text-decoration: underline; }
+        .project-badge { display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; font-size: 0.72em; font-weight: 600; padding: 2px 9px; border-radius: 10px; margin-left: 8px; vertical-align: middle; letter-spacing: 0.03em; }
+        .achievements { background: #fff; }
+        .achievements .section-title::before { content: "🏆"; }
+        .achievements-list { background: #f8f9fa; padding: 30px; border-radius: 10px; }
+        .achievements-list ul { margin-left: 20px; }
+        .achievements-list li { margin-bottom: 12px; font-size: 1.05em; }
+        .skills { background: #667eea; color: white; padding: 60px 20px; text-align: center; }
+        .skills h2 { margin-bottom: 10px; font-size: 1.8em; font-weight: 400; }
+        .skills-subtitle { font-size: 0.9em; opacity: 0.8; margin-bottom: 30px; }
+        .skill-category { margin-bottom: 20px; }
+        .skill-category-label { font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 10px; }
+        .skill-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 800px; margin: 0 auto; }
+        .skill-tag { background: rgba(255,255,255,0.2); padding: 8px 18px; border-radius: 20px; font-size: 0.92em; font-weight: 300; }
+        .skill-tag.highlight { background: rgba(255,255,255,0.35); font-weight: 500; }
+        .skills-divider { width: 60px; height: 1px; background: rgba(255,255,255,0.3); margin: 24px auto; }
+        footer { text-align: center; padding: 30px; background: #343a40; color: white; font-size: 0.95em; }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 
@@ -445,18 +83,15 @@
     <div class="hero">
         <h1>Md Ahsanul Karim</h1>
         <p class="subtitle">Master's Student @ KTH Royal Institute of Technology</p>
-        <p class="focus">Software Engineering of Distributed Systems | 9+ Years Experience</p>
-
+        <p class="focus">Software Engineering of Distributed Systems | 8+ Years Experience</p>
         <div class="social-icons">
             <a href="https://github.com/AhsanBracu" target="_blank" title="GitHub">
-                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/ahsanul-karim-7a569ab0/" target="_blank" title="LinkedIn">
-                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://www.linkedin.com/in/md-ahsanul-karim-7a569ab0/" target="_blank" title="LinkedIn">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect x="2" y="9" width="4" height="12"></rect>
                     <circle cx="4" cy="4" r="2"></circle>
@@ -478,9 +113,9 @@
     <div class="container" id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <p>Experienced Software Engineer with <strong>9+ years</strong> specializing in backend and distributed systems, with strong expertise in Node.js, .NET, Angular, microservices, and cloud platforms. I enjoy designing clean architectures, solving complex problems, and developing systems that scale efficiently.</p>
+            <p>Senior Software Engineer with <strong>8+ years</strong> building scalable backend systems, fullstack applications, and microservice architectures for European clients. Strong in Node.js, TypeScript, .NET Core, and Angular.</p>
             <br>
-            <p>Currently pursuing a Master's degree at <strong>KTH Royal Institute of Technology</strong> in Software Engineering of Distributed Systems, exploring <strong>distributed systems, blockchain, and cloud-native architectures</strong>.</p>
+            <p>Currently pursuing a Master's degree at <strong>KTH Royal Institute of Technology</strong> in Software Engineering of Distributed Systems — studying LLM inference systems, deep learning, and distributed architectures. <strong>AWS Hackathon winner (2025).</strong> Using Claude Code and OpenAI Codex daily.</p>
         </div>
     </div>
 
@@ -488,7 +123,6 @@
     <div class="container education" id="education">
         <h2 class="section-title">Education</h2>
         <div class="education-list">
-
             <div class="education-item">
                 <div class="edu-header">
                     <div>
@@ -497,21 +131,20 @@
                     </div>
                     <div class="date">August 2025 – Present</div>
                 </div>
-
                 <div class="coursework">
-                    <strong>Relevant Coursework:</strong> Deep Learning (DD2424), Distributed Systems (ID2203), Software Reliability (DD2459), Internet Architecture &amp; Protocols (IK2221), Programmable Society / Blockchain (DD2585)
+                    <strong>Relevant Coursework:</strong> Deep Learning, Distributed Systems, Software Reliability, Internet Architecture &amp; Protocols, Blockchain
                 </div>
-
                 <div class="kth-projects">
                     <h4>Selected Academic Projects</h4>
                     <ul>
-                        <li><strong>Linearizable KV Store (OmniPaxos/Rust)</strong> — Fault-tolerant distributed key-value store using the OmniPaxos consensus protocol over TCP; async gateway with <code>mpsc</code> channels, validated with Maelstrom.</li>
-                        <li><strong>SBOM Blockchain Verification System</strong> — Solidity smart contracts (<code>SBOMRegistry.sol</code>) for on-chain software bill-of-materials verification; CLI tooling, 63 tests, 98.51% code coverage using OpenZeppelin &amp; Hardhat.</li>
-                        <li><strong>Deep Learning on CIFAR-10</strong> — Two-layer neural network from scratch in NumPy with cyclic learning rates, dropout, and data augmentation; achieved <strong>57.32% test accuracy</strong>, gradients verified vs. PyTorch (ε ≈ 10⁻¹⁶).</li>
-                        <li><strong>N-Queens Multi-Agent Solver (GAMA)</strong> — Distributed backtracking solver using FIPA-compliant agent communication (Contract Net Protocol) with chessboard visualisation.</li>
+                        <li><strong>Deep Learning on CIFAR-10 &amp; Text Generation</strong> — Neural networks from scratch in NumPy; ConvNet (67.19% accuracy), RNN for Harry Potter text synthesis (best loss 1.461), gradients verified vs. PyTorch (ε ≈ 10⁻¹⁶).</li>
+                        <li><strong>KV Cache Clustering for LLM Inference</strong> — PCA + KMeans on real LMCache .bin files from a vLLM/Qwen2.5 deployment; evaluated with ARI/NMI metrics.</li>
+                        <li><strong>Networking for LLM Inference</strong> — Surveyed vLLM, CacheBlend, Sarathi, SplitRPC, Cheetah, RedN. Deep understanding of disaggregated inference, KV-cache reuse, and chunked prefill scheduling.</li>
+                        <li><strong>Linearizable KV Store (OmniPaxos)</strong> — Fault-tolerant distributed KV store using OmniPaxos consensus over TCP; async gateway, validated with Maelstrom.</li>
+                        <li><strong>SBOM Blockchain Verification System</strong> — Solidity smart contracts for on-chain SBOM verification; 63 tests, 98.51% code coverage using OpenZeppelin &amp; Hardhat.</li>
+                        <li><strong>N-Queens Multi-Agent Solver (GAMA)</strong> — Distributed backtracking solver using FIPA-compliant agent communication (Contract Net Protocol).</li>
                     </ul>
                 </div>
-
                 <div class="ai-tools-badge">
                     🤖 AI-Assisted Dev: Claude Code &amp; OpenAI Codex
                 </div>
@@ -529,7 +162,6 @@
                     <strong>Focus:</strong> Software Engineering, Data Structures, Algorithms, Databases, Operating Systems
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -541,32 +173,18 @@
                 <div class="header">
                     <div>
                         <h3>Senior Software Engineer</h3>
-                        <div class="company"><a href="https://www.linkedin.com/company/efficientsoftwaresolutionsltd/"
-                                target="_blank" style="color: #667eea; text-decoration: none;">Efficient Software
-                                Solutions</a>, Dhaka, Bangladesh</div>
-                        <div class="company" style="font-size: 0.9em; margin-top: 3px; font-style: italic;">Delivering
-                            quality assurance applications for clients in Ireland and Europe</div>
+                        <div class="company"><a href="https://www.linkedin.com/company/efficientsoftwaresolutionsltd/" target="_blank" style="color: #667eea; text-decoration: none;">Efficient Software Solutions</a>, Dhaka, Bangladesh</div>
+                        <div class="company" style="font-size: 0.9em; margin-top: 3px; font-style: italic;">Delivering full-stack applications for clients in Ireland and Europe</div>
                     </div>
                     <div class="date">October 2019 – July 2025</div>
                 </div>
                 <ul>
-                    <li>Led development team for 2 years in building a full-stack MEAN stack web application, managing
-                        project timelines, code reviews, and technical architecture decisions</li>
-                    <li>Managed version control and collaborative development using GitLab Community Edition
-                        (git.essapps.ie) for all project repositories</li>
-                    <li>Architected and implemented RESTful APIs using Node.js and Express.js, ensuring scalability and
-                        maintainability for multiple client applications</li>
-                    <li>Developed and optimized .NET Core-based ERP system for <a
-                            href="https://churchfieldhomeservices.ie/" target="_blank"
-                            style="color: #667eea; text-decoration: none;">Churchfield Home Services</a> in Ireland,
-                        implementing key business functionalities including sales, inventory, and customer relationship
-                        management modules</li>
-                    <li>Built microservices architecture using Java for automated email and SMS notification systems,
-                        processing 200+ daily messages with AWS SES integration</li>
-                    <li>Created responsive and dynamic web interfaces using Angular, RxJS, and NgRx, implementing state
-                        management patterns for complex business workflows</li>
-                    <li>Designed and implemented database schemas using MongoDB and Mongoose ODM for efficient data
-                        modeling and CRUD operations</li>
+                    <li>Led a cross-functional team for 2 years delivering a full-stack web application with admin portals for content, user, and event management — owning architecture decisions, code reviews, and Agile sprint planning</li>
+                    <li>Architected RESTful APIs in Node.js/Express.js enabling scalable platform functionality across multiple client-facing and internal applications</li>
+                    <li>Developed and optimized .NET Core ERP system for <a href="https://churchfieldhomeservices.ie/" target="_blank" style="color: #667eea; text-decoration: none;">Churchfield Home Services</a> covering sales, inventory, and CRM modules</li>
+                    <li>Built a Java/Spring Boot microservice replacing manual outreach with thousands of daily SMS/email notifications via AWS SES — zero operator intervention</li>
+                    <li>Developed Angular/RxJS/NgRx frontends and designed MongoDB schemas, delivering end-to-end features across complex business workflows</li>
+                    <li>Integrated third-party APIs (Sendmode, 3Com) and collaborated in Agile/Scrum teams using JIRA</li>
                 </ul>
             </div>
 
@@ -579,11 +197,9 @@
                     <div class="date">November 2016 – September 2019</div>
                 </div>
                 <ul>
-                    <li>Designed and developed enterprise-level applications using ASP.NET framework with Oracle DBMS
-                        backend</li>
+                    <li>Designed and developed enterprise-level applications using ASP.NET framework with Oracle DBMS backend</li>
                     <li>Built Android mobile applications with seamless integration to backend services</li>
-                    <li>Implemented PHP-based web solutions for various client projects, ensuring reliability and
-                        performance</li>
+                    <li>Implemented PHP-based web solutions for various client projects</li>
                 </ul>
             </div>
 
@@ -596,8 +212,7 @@
                     <div class="date">October 2015 – September 2016</div>
                 </div>
                 <ul>
-                    <li>Designed and developed native Android applications following best practices and material design
-                        guidelines</li>
+                    <li>Designed and developed native Android applications following material design guidelines and performance best practices</li>
                 </ul>
             </div>
 
@@ -620,73 +235,63 @@
     <div class="container projects" id="projects">
         <h2 class="section-title">Key Projects</h2>
         <div class="project-list">
-
             <div class="project-item">
                 <h3>Smart Lotto Web Application</h3>
-                <p>Comprehensive lottery management platform deployed in <strong>Ireland and England</strong> built with
-                    <strong>MEAN stack</strong>. Features game management, club administration portal, and
-                    administrative dashboard. Implemented <strong>Java-based microservice</strong> for automated daily
-                    <strong>SMS/email notifications (200+ messages)</strong> with <strong>AWS SES integration</strong>.
-                    Deployed using <strong>Docker containers on AWS infrastructure</strong> for scalability and
-                    reliability.</p>
+                <p>Lottery clubs in Ireland and England were managing dozens of simultaneous lotteries and promotions <strong>entirely manually</strong>. Built a <strong>MEAN stack</strong> platform for multi-lottery operations, club administration, and automated player engagement — replacing manual outreach with a <strong>Java/Spring Boot microservice</strong> delivering <strong>thousands of SMS/email notifications daily</strong> via <strong>AWS SES</strong> with zero operator intervention.</p>
                 <div class="link">🔗 <a href="https://smartlotto.ie" target="_blank">smartlotto.ie</a></div>
             </div>
 
             <div class="project-item">
                 <h3>Churchfield ERP System</h3>
-                <p><strong>.NET Core-based</strong> enterprise resource planning solution for <strong>Churchfield Home
-                        Services</strong> in Ireland. Developed modules for <strong>sales management, project
-                        scheduling, inventory control, customer relationship management, and financial
-                        operations</strong>. Streamlined business processes and enhanced operational efficiency for
-                    energy-efficient home improvement services. Deployed using <strong>Docker and AWS</strong> for high
-                    availability.</p>
-                <div class="link">🔗 <a href="https://churchfieldhomeservices.ie/"
-                        target="_blank">churchfieldhomeservices.ie</a></div>
+                <p><strong>.NET Core-based</strong> ERP for <strong>Churchfield Home Services</strong> in Ireland. Modules for sales management, project scheduling, inventory control, CRM, and financial operations. Deployed using <strong>Docker and AWS</strong>.</p>
+                <div class="link">🔗 <a href="https://churchfieldhomeservices.ie/" target="_blank">churchfieldhomeservices.ie</a></div>
             </div>
 
             <div class="project-item">
                 <h3>Omicon ERP System</h3>
-                <p>Comprehensive <strong>ASP.NET-based ERP platform</strong> for <strong>Lecture Publication</strong>.
-                    Implemented modules including <strong>Sales &amp; Marketing, Production, Distribution, R&amp;D &amp; Design, HR
-                        Management, Customer Management</strong>, and User Management with <strong>role-based access
-                        control</strong>.</p>
+                <p><strong>ASP.NET-based ERP</strong> for Lecture Publication with modules for Sales &amp; Marketing, Production, Distribution, HR Management, and role-based access control.</p>
             </div>
 
             <div class="project-item">
                 <h3>MEMIS (Madrasha Educational Management and Information System)</h3>
-                <p><strong>PHP-based</strong> information management system developed for the <strong>Directorate of
-                        Madrasah Education</strong>, providing comprehensive support for educational administration,
-                    student records, and reporting.</p>
+                <p><strong>PHP-based</strong> information system for the Directorate of Madrasah Education covering student records, administration, and reporting.</p>
             </div>
 
             <div class="project-item">
                 <h3>iDCR (Internet Daily Call Report)</h3>
-                <p><strong>Android application</strong> for Territory Sales Officers of <strong>Lecture
-                        Publication</strong> to manage daily attendance, expenses, work location tracking, and book
-                    distribution with <strong>offline capability and data synchronization</strong>.</p>
+                <p><strong>Android app</strong> for Territory Sales Officers managing attendance, expenses, location tracking, and book distribution with offline capability and data synchronization.</p>
             </div>
 
             <!-- KTH Academic Projects -->
             <div class="project-item">
-                <h3>Linearizable KV Store <span class="project-badge">KTH</span></h3>
-                <p>Fault-tolerant distributed key-value store built in <strong>Rust</strong> using the <strong>OmniPaxos consensus protocol</strong> over TCP. Features an async gateway with <code>mpsc</code> channels, HTTP request handlers, and clean port isolation across cluster nodes. Validated end-to-end with <strong>Maelstrom</strong>.</p>
+                <h3>Deep Learning on CIFAR-10 &amp; Text Generation <span class="project-badge">KTH</span></h3>
+                <p>Neural networks from scratch in <strong>NumPy/Python</strong> — ConvNet achieving <strong>67.19% test accuracy</strong> on CIFAR-10, and vanilla RNN for Harry Potter text synthesis (best loss <strong>1.461</strong>). Applied cyclic LR, dropout, label smoothing, temperature/nucleus sampling. Gradients verified vs. PyTorch (ε ≈ 10⁻¹⁶).</p>
+            </div>
+
+            <div class="project-item">
+                <h3>KV Cache Clustering for LLM Inference <span class="project-badge">KTH</span></h3>
+                <p>PCA + KMeans clustering on real <strong>LMCache .bin files</strong> from a live <strong>vLLM/Qwen2.5-1.5B</strong> deployment. Evaluated cluster quality with ARI and NMI metrics. Hands-on with KV cache mechanics, prefill/decode phases, and TTFT optimisation.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Networking for LLM Inference <span class="project-badge">KTH</span></h3>
+                <p>Surveyed state-of-the-art LLM serving systems: <strong>vLLM, CacheBlend, Sarathi, SplitRPC, Cheetah, RedN</strong>. Deep understanding of disaggregated inference, KV-cache reuse strategies, chunked prefill scheduling, and RDMA-based transport for ML workloads.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Linearizable KV Store (OmniPaxos) <span class="project-badge">KTH</span></h3>
+                <p>Fault-tolerant distributed KV store using <strong>OmniPaxos consensus</strong> over TCP. Async gateway with <code>mpsc</code> channels, HTTP handlers, and clean port isolation. Validated end-to-end with <strong>Maelstrom</strong>.</p>
             </div>
 
             <div class="project-item">
                 <h3>SBOM Blockchain Verification System <span class="project-badge">KTH</span></h3>
-                <p>Solidity smart contract system (<code>SBOMRegistry.sol</code>) for on-chain software bill-of-materials verification, with a CLI tool for interaction. <strong>63 tests, 98.51% code coverage</strong>. Explored gas optimisation vs. security trade-offs (reentrancy, integer overflow) using <strong>OpenZeppelin &amp; Hardhat</strong>.</p>
-            </div>
-
-            <div class="project-item">
-                <h3>Deep Learning on CIFAR-10 <span class="project-badge">KTH</span></h3>
-                <p>Implemented one- and two-layer neural networks from scratch in <strong>NumPy/Python</strong>. Applied <strong>cyclic learning rates, inverted dropout, and data augmentation</strong> to reach <strong>57.32% test accuracy</strong>. Gradient correctness verified against PyTorch (ε ≈ 10⁻¹⁶).</p>
+                <p>Solidity smart contracts for on-chain SBOM verification. <strong>63 tests, 98.51% code coverage</strong>. Gas optimisation vs. security trade-offs (reentrancy, integer overflow) using <strong>OpenZeppelin &amp; Hardhat</strong>.</p>
             </div>
 
             <div class="project-item">
                 <h3>N-Queens Multi-Agent Solver <span class="project-badge">KTH</span></h3>
-                <p>Distributed backtracking solver in <strong>GAMA</strong> using <strong>FIPA-compliant agent communication</strong> (Contract Net Protocol) with neighbor-only messaging and a chessboard visualisation. Studied autonomous agents, modal logic, and Dutch auction mechanisms.</p>
+                <p>Distributed backtracking solver in <strong>GAMA</strong> using FIPA-compliant agent communication (Contract Net Protocol) with chessboard visualisation.</p>
             </div>
-
         </div>
     </div>
 
@@ -700,12 +305,11 @@
                     <a href="https://www.linkedin.com/posts/md-ahsanul-karim-7a569ab0_hackathon-ai-machinelearning-activity-7430913232892133376-r7y7" target="_blank">View Post</a>
                 </li>
                 <li>Participated in <strong>ACM ICPC Dhaka Regional, Bangladesh</strong> 2012, 2013</li>
-                <li>Competed in <strong>Water Hackathon 2014</strong> focusing on sustainable technology solutions</li>
+                <li>Competed in <strong>Water Hackathon 2014</strong> — sustainable technology solutions</li>
                 <li>Completed <strong>Cisco CCNA1 &amp; CCNA2</strong> Networking Certification courses</li>
                 <li>Received <strong>Dean's Certificate</strong> for academic excellence, Summer 2012 semester</li>
-                <li>Served as <strong>Teaching Assistant</strong> for Programming Language I course at BRAC University
-                    (Summer 2013)</li>
-                <li>Member of <strong>BRAC University Cycling Club</strong></li>
+                <li>Served as <strong>Teaching Assistant</strong> for Programming Language I, BRAC University (Summer 2013)</li>
+                <li>Founding Member, <strong>BRAC University Cyclists Club</strong></li>
             </ul>
         </div>
     </div>
@@ -716,6 +320,22 @@
         <p class="skills-subtitle">Languages, frameworks, tools &amp; concepts</p>
 
         <div class="skill-category">
+            <div class="skill-category-label">AI / ML</div>
+            <div class="skill-tags">
+                <span class="skill-tag highlight">Claude Code</span>
+                <span class="skill-tag highlight">OpenAI Codex</span>
+                <span class="skill-tag highlight">PyTorch</span>
+                <span class="skill-tag highlight">NumPy</span>
+                <span class="skill-tag">scikit-learn</span>
+                <span class="skill-tag">vLLM</span>
+                <span class="skill-tag">LMCache</span>
+                <span class="skill-tag">Prompt Engineering</span>
+            </div>
+        </div>
+
+        <div class="skills-divider"></div>
+
+        <div class="skill-category">
             <div class="skill-category-label">Languages</div>
             <div class="skill-tags">
                 <span class="skill-tag highlight">JavaScript</span>
@@ -723,7 +343,6 @@
                 <span class="skill-tag highlight">C#</span>
                 <span class="skill-tag highlight">Java</span>
                 <span class="skill-tag highlight">Python</span>
-                <span class="skill-tag highlight">Rust</span>
                 <span class="skill-tag highlight">Solidity</span>
             </div>
         </div>
@@ -736,10 +355,10 @@
                 <span class="skill-tag">Node.js</span>
                 <span class="skill-tag">.NET Core</span>
                 <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">Java/Spring Boot</span>
                 <span class="skill-tag">Angular</span>
                 <span class="skill-tag">RxJS</span>
                 <span class="skill-tag">NgRx</span>
-                <span class="skill-tag">React Native</span>
             </div>
         </div>
 
@@ -762,7 +381,7 @@
             <div class="skill-tags">
                 <span class="skill-tag">Git</span>
                 <span class="skill-tag">Docker</span>
-                <span class="skill-tag">AWS (SES)</span>
+                <span class="skill-tag">AWS</span>
                 <span class="skill-tag">OpenZeppelin</span>
                 <span class="skill-tag">Hardhat</span>
                 <span class="skill-tag">Postman</span>
@@ -773,18 +392,9 @@
         <div class="skills-divider"></div>
 
         <div class="skill-category">
-            <div class="skill-category-label">AI Dev Tools</div>
-            <div class="skill-tags">
-                <span class="skill-tag highlight">Claude Code</span>
-                <span class="skill-tag highlight">OpenAI Codex</span>
-            </div>
-        </div>
-
-        <div class="skills-divider"></div>
-
-        <div class="skill-category">
             <div class="skill-category-label">Concepts</div>
             <div class="skill-tags">
+                <span class="skill-tag">LLM Inference</span>
                 <span class="skill-tag">RESTful APIs</span>
                 <span class="skill-tag">Microservices</span>
                 <span class="skill-tag">Distributed Systems</span>
@@ -798,7 +408,7 @@
     <footer>
         <p>© 2026 Md Ahsanul Karim | KTH Royal Institute of Technology</p>
         <p>📧 <a href="mailto:ahsancse.brac@gmail.com">ahsancse.brac@gmail.com</a> | 📍 Stockholm, Sweden</p>
+
     </footer>
 </body>
-
 </html>
