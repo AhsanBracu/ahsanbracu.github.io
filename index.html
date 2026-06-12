@@ -75,7 +75,7 @@
         nav a {
             color: #495057;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 15px;
             font-weight: 500;
             text-transform: uppercase;
             font-size: 0.85em;
@@ -113,6 +113,110 @@
             border-radius: 10px;
             font-size: 1.05em;
             line-height: 1.8;
+        }
+
+        /* Education Section */
+        .education {
+            background: #f0f4ff;
+        }
+
+        .education .section-title::before {
+            content: "🎓";
+        }
+
+        .education-list {
+            display: grid;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .education-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .education-item .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .education-item h3 {
+            color: #667eea;
+            font-size: 1.15em;
+            font-weight: 500;
+        }
+
+        .education-item .institution {
+            font-size: 0.98em;
+            color: #555;
+            margin-top: 3px;
+        }
+
+        .education-item .date {
+            font-size: 0.9em;
+            color: #888;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .coursework {
+            margin-top: 12px;
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        .coursework strong {
+            color: #444;
+        }
+
+        .kth-projects {
+            margin-top: 16px;
+        }
+
+        .kth-projects h4 {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .kth-projects ul {
+            margin-left: 18px;
+        }
+
+        .kth-projects li {
+            margin-bottom: 8px;
+            font-size: 0.97em;
+            line-height: 1.6;
+        }
+
+        .kth-projects li strong {
+            color: #667eea;
+        }
+
+        .ai-tools-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            background: linear-gradient(135deg, #667eea22, #764ba222);
+            border: 1px solid #667eea44;
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 0.88em;
+            color: #5060c0;
+            font-weight: 500;
         }
 
         .experience {
@@ -218,6 +322,19 @@
             text-decoration: underline;
         }
 
+        .project-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 0.72em;
+            font-weight: 600;
+            padding: 2px 9px;
+            border-radius: 10px;
+            margin-left: 8px;
+            vertical-align: middle;
+            letter-spacing: 0.03em;
+        }
+
         .achievements {
             background: #fff;
         }
@@ -249,26 +366,56 @@
         }
 
         .skills h2 {
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             font-size: 1.8em;
             font-weight: 400;
+        }
+
+        .skills-subtitle {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .skill-category {
+            margin-bottom: 20px;
+        }
+
+        .skill-category-label {
+            font-size: 0.78em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+            margin-bottom: 10px;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             max-width: 800px;
             margin: 0 auto;
         }
 
         .skill-tag {
             background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
+            padding: 8px 18px;
             border-radius: 20px;
-            font-size: 0.95em;
+            font-size: 0.92em;
             font-weight: 300;
+        }
+
+        .skill-tag.highlight {
+            background: rgba(255, 255, 255, 0.35);
+            font-weight: 500;
+        }
+
+        .skills-divider {
+            width: 60px;
+            height: 1px;
+            background: rgba(255,255,255,0.3);
+            margin: 24px auto;
         }
 
         footer {
@@ -304,9 +451,7 @@
             <a href="https://github.com/AhsanBracu" target="_blank" title="GitHub">
                 <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                    </path>
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
             </a>
             <a href="https://www.linkedin.com/in/ahsanul-karim-7a569ab0/" target="_blank" title="LinkedIn">
@@ -322,29 +467,73 @@
 
     <nav>
         <a href="#about">ABOUT</a>
+        <a href="#education">EDUCATION</a>
         <a href="#experience">EXPERIENCE</a>
         <a href="#projects">PROJECTS</a>
         <a href="#achievements">ACHIEVEMENTS</a>
         <a href="#skills">SKILLS</a>
     </nav>
 
+    <!-- ABOUT -->
     <div class="container" id="about">
         <h2 class="section-title">About Me</h2>
-        <!-- <div class="about-content">
-            <p>Experienced Software Engineer specializing in backend and distributed systems, with strong expertise in Node.js, .NET, and cloud technologies. Currently completing a Master's degree at <strong>KTH Royal Institute of Technology</strong>, focused on scalable, reliable, and high-performance software systems.</p>
-            <br>
-            <p>I have <strong>9+ years of professional experience</strong> in backend and full-stack development, working with Node.js, .NET, Angular, microservices, and cloud technologies. I enjoy designing clean architectures, solving complex problems, and building systems that scale.</p>
-            <br>
-            <p>Currently exploring <strong>distributed systems, blockchain, and cloud-native architectures</strong> through my Master's program focused on Software Engineering of Distributed Systems and Modern Methods in Software Engineering.</p>
-        </div> -->
         <div class="about-content">
-   <p>Experienced Software Engineer with <strong>9+ years</strong> specializing in backend and distributed systems, with strong expertise in Node.js, .NET, Angular, microservices, and cloud platforms. I enjoy designing clean architectures, solving complex problems, and developing systems that scale efficiently.</p>
+            <p>Experienced Software Engineer with <strong>9+ years</strong> specializing in backend and distributed systems, with strong expertise in Node.js, .NET, Angular, microservices, and cloud platforms. I enjoy designing clean architectures, solving complex problems, and developing systems that scale efficiently.</p>
             <br>
             <p>Currently pursuing a Master's degree at <strong>KTH Royal Institute of Technology</strong> in Software Engineering of Distributed Systems, exploring <strong>distributed systems, blockchain, and cloud-native architectures</strong>.</p>
         </div>
-
     </div>
 
+    <!-- EDUCATION -->
+    <div class="container education" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-list">
+
+            <div class="education-item">
+                <div class="edu-header">
+                    <div>
+                        <h3>MSc in Software Engineering of Distributed Systems</h3>
+                        <div class="institution">KTH Royal Institute of Technology, Stockholm, Sweden</div>
+                    </div>
+                    <div class="date">August 2025 – Present</div>
+                </div>
+
+                <div class="coursework">
+                    <strong>Relevant Coursework:</strong> Deep Learning (DD2424), Distributed Systems (ID2203), Software Reliability (DD2459), Internet Architecture &amp; Protocols (IK2221), Programmable Society / Blockchain (DD2585)
+                </div>
+
+                <div class="kth-projects">
+                    <h4>Selected Academic Projects</h4>
+                    <ul>
+                        <li><strong>Linearizable KV Store (OmniPaxos/Rust)</strong> — Fault-tolerant distributed key-value store using the OmniPaxos consensus protocol over TCP; async gateway with <code>mpsc</code> channels, validated with Maelstrom.</li>
+                        <li><strong>SBOM Blockchain Verification System</strong> — Solidity smart contracts (<code>SBOMRegistry.sol</code>) for on-chain software bill-of-materials verification; CLI tooling, 63 tests, 98.51% code coverage using OpenZeppelin &amp; Hardhat.</li>
+                        <li><strong>Deep Learning on CIFAR-10</strong> — Two-layer neural network from scratch in NumPy with cyclic learning rates, dropout, and data augmentation; achieved <strong>57.32% test accuracy</strong>, gradients verified vs. PyTorch (ε ≈ 10⁻¹⁶).</li>
+                        <li><strong>N-Queens Multi-Agent Solver (GAMA)</strong> — Distributed backtracking solver using FIPA-compliant agent communication (Contract Net Protocol) with chessboard visualisation.</li>
+                    </ul>
+                </div>
+
+                <div class="ai-tools-badge">
+                    🤖 AI-Assisted Dev: Claude Code &amp; OpenAI Codex
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="edu-header">
+                    <div>
+                        <h3>Bachelor of Science in Computer Science and Engineering</h3>
+                        <div class="institution">BRAC University, Dhaka, Bangladesh &mdash; CGPA: 3.48/4.00</div>
+                    </div>
+                    <div class="date">2010 – 2014</div>
+                </div>
+                <div class="coursework">
+                    <strong>Focus:</strong> Software Engineering, Data Structures, Algorithms, Databases, Operating Systems
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
     <div class="container experience" id="experience">
         <h2 class="section-title">Professional Experience</h2>
         <div class="experience-list">
@@ -427,9 +616,11 @@
         </div>
     </div>
 
+    <!-- PROJECTS -->
     <div class="container projects" id="projects">
         <h2 class="section-title">Key Projects</h2>
         <div class="project-list">
+
             <div class="project-item">
                 <h3>Smart Lotto Web Application</h3>
                 <p>Comprehensive lottery management platform deployed in <strong>Ireland and England</strong> built with
@@ -456,7 +647,7 @@
             <div class="project-item">
                 <h3>Omicon ERP System</h3>
                 <p>Comprehensive <strong>ASP.NET-based ERP platform</strong> for <strong>Lecture Publication</strong>.
-                    Implemented modules including <strong>Sales & Marketing, Production, Distribution, R&D & Design, HR
+                    Implemented modules including <strong>Sales &amp; Marketing, Production, Distribution, R&amp;D &amp; Design, HR
                         Management, Customer Management</strong>, and User Management with <strong>role-based access
                         control</strong>.</p>
             </div>
@@ -474,20 +665,43 @@
                         Publication</strong> to manage daily attendance, expenses, work location tracking, and book
                     distribution with <strong>offline capability and data synchronization</strong>.</p>
             </div>
+
+            <!-- KTH Academic Projects -->
+            <div class="project-item">
+                <h3>Linearizable KV Store <span class="project-badge">KTH</span></h3>
+                <p>Fault-tolerant distributed key-value store built in <strong>Rust</strong> using the <strong>OmniPaxos consensus protocol</strong> over TCP. Features an async gateway with <code>mpsc</code> channels, HTTP request handlers, and clean port isolation across cluster nodes. Validated end-to-end with <strong>Maelstrom</strong>.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>SBOM Blockchain Verification System <span class="project-badge">KTH</span></h3>
+                <p>Solidity smart contract system (<code>SBOMRegistry.sol</code>) for on-chain software bill-of-materials verification, with a CLI tool for interaction. <strong>63 tests, 98.51% code coverage</strong>. Explored gas optimisation vs. security trade-offs (reentrancy, integer overflow) using <strong>OpenZeppelin &amp; Hardhat</strong>.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Deep Learning on CIFAR-10 <span class="project-badge">KTH</span></h3>
+                <p>Implemented one- and two-layer neural networks from scratch in <strong>NumPy/Python</strong>. Applied <strong>cyclic learning rates, inverted dropout, and data augmentation</strong> to reach <strong>57.32% test accuracy</strong>. Gradient correctness verified against PyTorch (ε ≈ 10⁻¹⁶).</p>
+            </div>
+
+            <div class="project-item">
+                <h3>N-Queens Multi-Agent Solver <span class="project-badge">KTH</span></h3>
+                <p>Distributed backtracking solver in <strong>GAMA</strong> using <strong>FIPA-compliant agent communication</strong> (Contract Net Protocol) with neighbor-only messaging and a chessboard visualisation. Studied autonomous agents, modal logic, and Dutch auction mechanisms.</p>
+            </div>
+
         </div>
     </div>
 
+    <!-- ACHIEVEMENTS -->
     <div class="container achievements" id="achievements">
         <h2 class="section-title">Achievements & Activities</h2>
         <div class="achievements-list">
             <ul>
                 <li>🏆 <strong>1st Place Winner - Kolomolo AI Business Value Hackathon</strong> at AWS Sweden HQ (2025)<br>
-                    Built a predictive P&L forecasting model with automated explanations for fast-growing organizations
+                    Built a predictive P&amp;L forecasting model with automated explanations for fast-growing organizations.
                     <a href="https://www.linkedin.com/posts/md-ahsanul-karim-7a569ab0_hackathon-ai-machinelearning-activity-7430913232892133376-r7y7" target="_blank">View Post</a>
                 </li>
                 <li>Participated in <strong>ACM ICPC Dhaka Regional, Bangladesh</strong> 2012, 2013</li>
                 <li>Competed in <strong>Water Hackathon 2014</strong> focusing on sustainable technology solutions</li>
-                <li>Completed <strong>Cisco CCNA1 & CCNA2</strong> Networking Certification courses</li>
+                <li>Completed <strong>Cisco CCNA1 &amp; CCNA2</strong> Networking Certification courses</li>
                 <li>Received <strong>Dean's Certificate</strong> for academic excellence, Summer 2012 semester</li>
                 <li>Served as <strong>Teaching Assistant</strong> for Programming Language I course at BRAC University
                     (Summer 2013)</li>
@@ -496,27 +710,88 @@
         </div>
     </div>
 
+    <!-- SKILLS -->
     <div class="skills" id="skills">
         <h2>Technical Skills</h2>
-        <div class="skill-tags">
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">C#</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">.NET Core</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">Angular</span>
-            <span class="skill-tag">RxJS</span>
-            <span class="skill-tag">NgRx</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">SQL Server</span>
-            <span class="skill-tag">Oracle</span>
-            <span class="skill-tag">RESTful APIs</span>
-            <span class="skill-tag">Microservices</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Agile/Scrum</span>
+        <p class="skills-subtitle">Languages, frameworks, tools &amp; concepts</p>
+
+        <div class="skill-category">
+            <div class="skill-category-label">Languages</div>
+            <div class="skill-tags">
+                <span class="skill-tag highlight">JavaScript</span>
+                <span class="skill-tag highlight">TypeScript</span>
+                <span class="skill-tag highlight">C#</span>
+                <span class="skill-tag highlight">Java</span>
+                <span class="skill-tag highlight">Python</span>
+                <span class="skill-tag highlight">Rust</span>
+                <span class="skill-tag highlight">Solidity</span>
+            </div>
+        </div>
+
+        <div class="skills-divider"></div>
+
+        <div class="skill-category">
+            <div class="skill-category-label">Backend &amp; Frontend</div>
+            <div class="skill-tags">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">.NET Core</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">Angular</span>
+                <span class="skill-tag">RxJS</span>
+                <span class="skill-tag">NgRx</span>
+                <span class="skill-tag">React Native</span>
+            </div>
+        </div>
+
+        <div class="skills-divider"></div>
+
+        <div class="skill-category">
+            <div class="skill-category-label">Databases</div>
+            <div class="skill-tags">
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">SQL Server</span>
+                <span class="skill-tag">Oracle</span>
+            </div>
+        </div>
+
+        <div class="skills-divider"></div>
+
+        <div class="skill-category">
+            <div class="skill-category-label">Tools &amp; Platforms</div>
+            <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">AWS (SES)</span>
+                <span class="skill-tag">OpenZeppelin</span>
+                <span class="skill-tag">Hardhat</span>
+                <span class="skill-tag">Postman</span>
+                <span class="skill-tag">JIRA</span>
+            </div>
+        </div>
+
+        <div class="skills-divider"></div>
+
+        <div class="skill-category">
+            <div class="skill-category-label">AI Dev Tools</div>
+            <div class="skill-tags">
+                <span class="skill-tag highlight">Claude Code</span>
+                <span class="skill-tag highlight">OpenAI Codex</span>
+            </div>
+        </div>
+
+        <div class="skills-divider"></div>
+
+        <div class="skill-category">
+            <div class="skill-category-label">Concepts</div>
+            <div class="skill-tags">
+                <span class="skill-tag">RESTful APIs</span>
+                <span class="skill-tag">Microservices</span>
+                <span class="skill-tag">Distributed Systems</span>
+                <span class="skill-tag">Consensus Protocols</span>
+                <span class="skill-tag">Agile/Scrum</span>
+                <span class="skill-tag">Blockchain</span>
+            </div>
         </div>
     </div>
 
